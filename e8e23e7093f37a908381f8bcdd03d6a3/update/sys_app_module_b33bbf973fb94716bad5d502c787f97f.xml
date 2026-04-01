@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module">
+    <sys_app_module action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <application/>
+        <assessment/>
+        <device_type/>
+        <filter/>
+        <hint>Public AI Learning Day Agenda - accessible without login</hint>
+        <homepage/>
+        <image/>
+        <link_type>DIRECT</link_type>
+        <map_page/>
+        <mobile_title/>
+        <mobile_view_name/>
+        <name/>
+        <order>50</order>
+        <override_menu_roles>false</override_menu_roles>
+        <query>sp?id=ai_learning_agenda</query>
+        <report/>
+        <require_confirmation>false</require_confirmation>
+        <roles/>
+        <sys_class_name>sys_app_module</sys_class_name>
+        <sys_created_by>leo.francia@snc</sys_created_by>
+        <sys_created_on>2026-03-31 02:35:56</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>b33bbf973fb94716bad5d502c787f97f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Public Agenda (Service Portal)</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="AI Learning Day Agenda Builder" source="x_snc_ai_learnin_4">e8e23e7093f37a908381f8bcdd03d6a3</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AI Learning Day Agenda Builder">e8e23e7093f37a908381f8bcdd03d6a3</sys_scope>
+        <sys_update_name>sys_app_module_b33bbf973fb94716bad5d502c787f97f</sys_update_name>
+        <sys_updated_by>leo.francia@snc</sys_updated_by>
+        <sys_updated_on>2026-03-31 02:35:56</sys_updated_on>
+        <timeline_page/>
+        <title>Public Agenda (Service Portal)</title>
+        <uncancelable>false</uncancelable>
+        <view_name/>
+        <window_name/>
+    </sys_app_module>
+</record_update>

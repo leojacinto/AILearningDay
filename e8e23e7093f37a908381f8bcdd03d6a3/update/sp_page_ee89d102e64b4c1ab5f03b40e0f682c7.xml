@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_page">
+    <sp_page action="INSERT_OR_UPDATE">
+        <category/>
+        <css/>
+        <draft>false</draft>
+        <dynamic_title_structure/>
+        <human_readable_url_structure/>
+        <id>ai_sessions_test</id>
+        <internal>false</internal>
+        <omit_watcher>false</omit_watcher>
+        <public>true</public>
+        <roles/>
+        <seo_script/>
+        <short_description/>
+        <sys_class_name>sp_page</sys_class_name>
+        <sys_created_by>leo.francia@snc</sys_created_by>
+        <sys_created_on>2026-03-31 08:21:22</sys_created_on>
+        <sys_id>ee89d102e64b4c1ab5f03b40e0f682c7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>ai_sessions_test</sys_name>
+        <sys_package display_value="AI Learning Day Agenda Builder" source="x_snc_ai_learnin_4">e8e23e7093f37a908381f8bcdd03d6a3</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AI Learning Day Agenda Builder">e8e23e7093f37a908381f8bcdd03d6a3</sys_scope>
+        <sys_update_name>sp_page_ee89d102e64b4c1ab5f03b40e0f682c7</sys_update_name>
+        <sys_updated_by>leo.francia@snc</sys_updated_by>
+        <sys_updated_on>2026-03-31 08:21:22</sys_updated_on>
+        <title>AI Sessions Test Page</title>
+        <use_seo_script>false</use_seo_script>
+    </sp_page>
+    <sys_translated_text action="delete_multiple" query="documentkey=ee89d102e64b4c1ab5f03b40e0f682c7"/>
+</record_update>

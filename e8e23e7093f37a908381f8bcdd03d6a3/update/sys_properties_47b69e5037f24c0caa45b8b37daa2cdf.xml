@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties">
+    <sys_properties action="INSERT_OR_UPDATE">
+        <choices/>
+        <description>Triggers choice cleanup when created</description>
+        <ignore_cache>false</ignore_cache>
+        <is_private>false</is_private>
+        <name>x_snc_ai_learnin_4.cleanup_trigger</name>
+        <read_roles/>
+        <suffix/>
+        <sys_class_name>sys_properties</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-03-21 01:27:20</sys_created_on>
+        <sys_id>47b69e5037f24c0caa45b8b37daa2cdf</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_snc_ai_learnin_4.cleanup_trigger</sys_name>
+        <sys_package display_value="AI Learning Day Agenda Builder" source="x_snc_ai_learnin_4">e8e23e7093f37a908381f8bcdd03d6a3</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AI Learning Day Agenda Builder">e8e23e7093f37a908381f8bcdd03d6a3</sys_scope>
+        <sys_update_name>sys_properties_47b69e5037f24c0caa45b8b37daa2cdf</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-03-21 01:27:20</sys_updated_on>
+        <type/>
+        <value>true</value>
+        <write_roles/>
+    </sys_properties>
+    <sys_translated_text action="delete_multiple" query="documentkey=47b69e5037f24c0caa45b8b37daa2cdf"/>
+</record_update>
