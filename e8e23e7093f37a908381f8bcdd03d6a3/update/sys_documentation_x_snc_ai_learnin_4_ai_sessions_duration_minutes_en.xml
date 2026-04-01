@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="duration_minutes" label="Duration (Minutes)" language="en" table="x_snc_ai_learnin_4_ai_sessions">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>duration_minutes</element>
+            <help/>
+            <hint/>
+            <label>Duration (Minutes)</label>
+            <language>en</language>
+            <name>x_snc_ai_learnin_4_ai_sessions</name>
+            <plural>Duration (Minutes)</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-03-21 00:01:46</sys_created_on>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Duration (Minutes)</sys_name>
+            <sys_package display_value="AI Learning Day Agenda Builder" source="x_snc_ai_learnin_4">e8e23e7093f37a908381f8bcdd03d6a3</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="AI Learning Day Agenda Builder">e8e23e7093f37a908381f8bcdd03d6a3</sys_scope>
+            <sys_update_name>sys_documentation_x_snc_ai_learnin_4_ai_sessions_duration_minutes_en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-03-21 00:01:46</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

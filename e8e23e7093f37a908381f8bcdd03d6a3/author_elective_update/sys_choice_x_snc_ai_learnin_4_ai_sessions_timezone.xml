@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="timezone" table="x_snc_ai_learnin_4_ai_sessions" version="3">
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>timezone</element>
+            <name>x_snc_ai_learnin_4_ai_sessions</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-03-21 02:56:30</sys_created_on>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>timezone</sys_name>
+            <sys_package display_value="AI Learning Day Agenda Builder" source="x_snc_ai_learnin_4">e8e23e7093f37a908381f8bcdd03d6a3</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="AI Learning Day Agenda Builder">e8e23e7093f37a908381f8bcdd03d6a3</sys_scope>
+            <sys_update_name>sys_choice_x_snc_ai_learnin_4_ai_sessions_timezone</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-03-21 02:56:30</sys_updated_on>
+        </sys_choice_set>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>timezone</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>UTC</label>
+            <language>en</language>
+            <name>x_snc_ai_learnin_4_ai_sessions</name>
+            <sequence>0</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-03-21 02:56:30</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-03-21 02:56:30</sys_updated_on>
+            <value>utc</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>timezone</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>AEST (UTC+10)</label>
+            <language>en</language>
+            <name>x_snc_ai_learnin_4_ai_sessions</name>
+            <sequence>1</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-03-21 02:56:30</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-03-21 02:56:30</sys_updated_on>
+            <value>aest</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>timezone</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>AEDT (UTC+11)</label>
+            <language>en</language>
+            <name>x_snc_ai_learnin_4_ai_sessions</name>
+            <sequence>2</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-03-21 02:56:30</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-03-21 02:56:30</sys_updated_on>
+            <value>aedt</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>timezone</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>JST (UTC+9)</label>
+            <language>en</language>
+            <name>x_snc_ai_learnin_4_ai_sessions</name>
+            <sequence>3</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-03-21 02:56:30</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-03-21 02:56:30</sys_updated_on>
+            <value>jst</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>timezone</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>KST (UTC+9)</label>
+            <language>en</language>
+            <name>x_snc_ai_learnin_4_ai_sessions</name>
+            <sequence>4</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-03-21 02:56:30</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-03-21 02:56:30</sys_updated_on>
+            <value>kst</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>timezone</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>IST (UTC+5:30)</label>
+            <language>en</language>
+            <name>x_snc_ai_learnin_4_ai_sessions</name>
+            <sequence>5</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-03-21 02:56:30</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-03-21 02:56:30</sys_updated_on>
+            <value>ist</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>timezone</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>HKT (UTC+8)</label>
+            <language>en</language>
+            <name>x_snc_ai_learnin_4_ai_sessions</name>
+            <sequence>6</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-03-21 02:56:30</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-03-21 02:56:30</sys_updated_on>
+            <value>hkt</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>timezone</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>SGT (UTC+8)</label>
+            <language>en</language>
+            <name>x_snc_ai_learnin_4_ai_sessions</name>
+            <sequence>7</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-03-21 02:56:30</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-03-21 02:56:30</sys_updated_on>
+            <value>sgt</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>timezone</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>PST (UTC-8)</label>
+            <language>en</language>
+            <name>x_snc_ai_learnin_4_ai_sessions</name>
+            <sequence>8</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-03-21 02:56:30</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-03-21 02:56:30</sys_updated_on>
+            <value>pst</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>timezone</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>EST (UTC-5)</label>
+            <language>en</language>
+            <name>x_snc_ai_learnin_4_ai_sessions</name>
+            <sequence>9</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-03-21 02:56:30</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-03-21 02:56:30</sys_updated_on>
+            <value>est</value>
+        </sys_choice>
+    </sys_choice>
+</record_update>

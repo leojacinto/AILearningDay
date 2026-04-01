@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_public">
+    <sys_public action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <page>/x_snc_ai_learnin_4_agenda.do</page>
+        <sys_class_name>sys_public</sys_class_name>
+        <sys_created_by>leo.francia@snc</sys_created_by>
+        <sys_created_on>2026-03-31 08:39:04</sys_created_on>
+        <sys_id>ca8753be5b8f48fdad56c89f1f4e3de4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>/x_snc_ai_learnin_4_agenda.do</sys_name>
+        <sys_package display_value="AI Learning Day Agenda Builder" source="x_snc_ai_learnin_4">e8e23e7093f37a908381f8bcdd03d6a3</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AI Learning Day Agenda Builder">e8e23e7093f37a908381f8bcdd03d6a3</sys_scope>
+        <sys_update_name>sys_public_ca8753be5b8f48fdad56c89f1f4e3de4</sys_update_name>
+        <sys_updated_by>leo.francia@snc</sys_updated_by>
+        <sys_updated_on>2026-03-31 08:39:04</sys_updated_on>
+    </sys_public>
+</record_update>

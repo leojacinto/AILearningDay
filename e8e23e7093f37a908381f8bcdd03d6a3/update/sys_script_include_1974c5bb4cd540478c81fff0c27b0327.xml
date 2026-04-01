@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_snc_ai_learnin_4.TimezoneFieldUpdater</api_name>
+        <caller_access>1</caller_access>
+        <client_callable>true</client_callable>
+        <description>Script Include to update timezone field mandatory settings</description>
+        <mobile_callable>false</mobile_callable>
+        <name>TimezoneFieldUpdater</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[var TimezoneFieldUpdater = Class.create();
+TimezoneFieldUpdater.prototype = {
+  initialize: function() {},
+  
+  updateTimezoneMandatory: function() {
+    gs.info('=== Starting Timezone Mandatory Field Update ===');
+    
+    var successCount = 0;
+    
+    // Update sys_dictionary directly
+    var dictGr = new GlideRecord('sys_dictionary');
+    if (dictGr.get('dbbcd3f8937bba908381f8bcdd03d677')) { // timezone field sys_id
+      gs.info('Found timezone dictionary entry: ' + dictGr.getValue('column_label'));
+      dictGr.setValue('mandatory', true);
+      dictGr.update();
+      successCount++;
+      gs.info('✅ Updated sys_dictionary mandatory field');
+    } else {
+      gs.warn('⚠️ Timezone dictionary entry not found');
+    }
+    
+    // Update sys_ui_element directly
+    var uiGr = new GlideRecord('sys_ui_element');
+    if (uiGr.get('68be654976674ba5855418e749999879')) { // timezone UI element sys_id
+      gs.info('Found timezone UI element');
+      uiGr.setValue('mandatory', true);
+      uiGr.update();
+      successCount++;
+      gs.info('✅ Updated sys_ui_element mandatory field');
+    } else {
+      gs.warn('⚠️ Timezone UI element not found');
+    }
+    
+    gs.info('=== Update Complete: ' + successCount + ' records updated ===');
+    return {
+      success: true,
+      updated: successCount
+    };
+  },
+  
+  type: 'TimezoneFieldUpdater'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-03-21 14:25:00</sys_created_on>
+        <sys_id>1974c5bb4cd540478c81fff0c27b0327</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>TimezoneFieldUpdater</sys_name>
+        <sys_package display_value="AI Learning Day Agenda Builder" source="x_snc_ai_learnin_4">e8e23e7093f37a908381f8bcdd03d6a3</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AI Learning Day Agenda Builder">e8e23e7093f37a908381f8bcdd03d6a3</sys_scope>
+        <sys_update_name>sys_script_include_1974c5bb4cd540478c81fff0c27b0327</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-03-21 14:25:00</sys_updated_on>
+    </sys_script_include>
+</record_update>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_user_role">
+    <sys_user_role action="INSERT_OR_UPDATE">
+        <assignable_by/>
+        <can_delegate>true</can_delegate>
+        <description>Full administrative access to AI Learning Day sessions</description>
+        <elevated_privilege>false</elevated_privilege>
+        <encryption_context/>
+        <federated_id>aNGmgRNX8+7Alh1d9RO1UN+VYF+UURrDQAyQOIVmMh4=</federated_id>
+        <grantable>true</grantable>
+        <includes_roles/>
+        <name>x_snc_ai_learnin_4.admin</name>
+        <scoped_admin>true</scoped_admin>
+        <suffix>admin</suffix>
+        <sys_class_name>sys_user_role</sys_class_name>
+        <sys_created_by>leo.francia@snc</sys_created_by>
+        <sys_created_on>2026-03-31 01:42:47</sys_created_on>
+        <sys_id>b91980114fb945899cb474ad480cfaa0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_snc_ai_learnin_4.admin</sys_name>
+        <sys_package display_value="AI Learning Day Agenda Builder" source="x_snc_ai_learnin_4">e8e23e7093f37a908381f8bcdd03d6a3</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AI Learning Day Agenda Builder">e8e23e7093f37a908381f8bcdd03d6a3</sys_scope>
+        <sys_update_name>sys_user_role_b91980114fb945899cb474ad480cfaa0</sys_update_name>
+        <sys_updated_by>leo.francia@snc</sys_updated_by>
+        <sys_updated_on>2026-03-31 01:42:47</sys_updated_on>
+    </sys_user_role>
+</record_update>

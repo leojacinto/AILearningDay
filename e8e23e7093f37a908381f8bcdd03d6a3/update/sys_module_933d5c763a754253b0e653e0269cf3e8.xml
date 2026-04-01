@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_module">
+    <sys_module action="INSERT_OR_UPDATE">
+        <content><![CDATA[// One-time script to update APAC choice label
+// Execute this manually or integrate into existing Script Include
+
+var updateChoiceLabel = function() {
+  gs.info('=== MANUAL UPDATING APAC Choice Label ===');
+  
+  try {
+    // Update the sys_choice record directly
+    var choiceGR = new GlideRecord('sys_choice');
+    choiceGR.addQuery('name', 'x_snc_ai_learnin_4_ai_sessions');
+    choiceGR.addQuery('element', 'geo_major_area');
+    choiceGR.addQuery('value', 'apac_general');
+    choiceGR.query();
+    
+    if (choiceGR.next()) {
+      gs.info('Found choice record with current label: ' + choiceGR.getValue('label'));
+      
+      // Update the label
+      choiceGR.setValue('label', 'APAC All');
+      var updated = choiceGR.update();
+      
+      if (updated) {
+        gs.info('✅ Successfully updated choice label to: APAC All');
+        return true;
+      } else {
+        gs.error('❌ Failed to update choice label');
+        return false;
+      }
+    } else {
+      gs.error('❌ Choice record not found');
+      return false;
+    }
+  } catch (e) {
+    gs.error('❌ Exception: ' + e.message);
+    return false;
+  }
+};
+
+// Execute the update
+var success = updateChoiceLabel();
+gs.info('Update result: ' + success);]]></content>
+        <external_source>false</external_source>
+        <path>x_snc_ai_learnin_4/x-snc-ai-learning-day-agenda-builder/1.0.0/src/server/choice-cleanup/manual-update.js</path>
+        <sys_class_name>sys_module</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-03-21 16:10:04</sys_created_on>
+        <sys_id>933d5c763a754253b0e653e0269cf3e8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_snc_ai_learnin_4/x-snc-ai-learning-day-agenda-builder/1.0.0/src/server/choice-cleanup/manual-update.js</sys_name>
+        <sys_package display_value="AI Learning Day Agenda Builder" source="x_snc_ai_learnin_4">e8e23e7093f37a908381f8bcdd03d6a3</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AI Learning Day Agenda Builder">e8e23e7093f37a908381f8bcdd03d6a3</sys_scope>
+        <sys_update_name>sys_module_933d5c763a754253b0e653e0269cf3e8</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-03-21 16:10:04</sys_updated_on>
+    </sys_module>
+</record_update>

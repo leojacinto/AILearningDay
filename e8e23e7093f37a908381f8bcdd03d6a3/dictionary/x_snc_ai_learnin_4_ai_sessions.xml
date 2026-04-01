@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="84c4baf893f37a908381f8bcdd03d664" label="AI Learning Day Sessions" max_length="40" name="x_snc_ai_learnin_4_ai_sessions" type="collection">
+        <element attributes="edge_encryption_enabled=true" label="End Time" mandatory="true" max_length="40" name="end_time" type="glide_date_time"/>
+        <element attributes="edge_encryption_enabled=true" label="Presenter/Speaker" max_length="100" name="presenter" type="string"/>
+        <element choice="1" label="Geo / Major Area" mandatory="true" max_length="40" name="geo_major_area" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="India" sequence="2" value="india"/>
+                <element inactive_on_update="false" label="Japan" sequence="3" value="japan"/>
+                <element inactive_on_update="false" label="Asia and Korea" sequence="0" value="asia_korea"/>
+                <element inactive_on_update="false" label="APAC All" sequence="4" value="apac_general"/>
+                <element inactive_on_update="false" label="ANZ" sequence="1" value="anz"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" display="true" label="Session Title" mandatory="true" max_length="200" name="title" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Virtual Meeting Link" max_length="500" name="virtual_link" type="string"/>
+        <element label="Duration (Minutes)" max_length="40" name="duration_minutes" type="integer"/>
+        <element label="Featured Session" max_length="40" name="is_featured" type="boolean"/>
+        <element attributes="edge_encryption_enabled=true" label="Description" max_length="1000" name="description" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Prerequisites" max_length="500" name="prerequisites" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Start Time" mandatory="true" max_length="40" name="start_time" type="glide_date_time"/>
+        <element attributes="array=denormalized,no_sort=true,slushbucket_ref_no_expand=true" label="Target Role" mandatory="true" max_length="4000" name="target_roles" reference="x_snc_ai_learnin_4_role_choices" type="glide_list"/>
+        <element choice="1" label="Session Type" mandatory="true" max_length="40" name="session_type" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="CoLab" sequence="4" value="colab"/>
+                <element inactive_on_update="false" label="In Person Discussion" sequence="5" value="in_person_discussion"/>
+                <element inactive_on_update="false" label="MA Kickoff" sequence="1" value="ma_kickoff"/>
+                <element inactive_on_update="false" label="Webinar (Live)" sequence="2" value="webinar_live"/>
+                <element inactive_on_update="false" label="Blocked Learning Time" sequence="6" value="blocked_learning_time"/>
+                <element inactive_on_update="false" label="ELearning (Self-Paced)" sequence="3" value="elearning_self_paced"/>
+                <element inactive_on_update="false" label="All Session Types" sequence="0" value="all_session_types"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="Tags (comma-separated)" max_length="300" name="tags" type="string"/>
+        <element label="Maximum Attendees" max_length="40" name="max_attendees" type="integer"/>
+        <element attributes="edge_encryption_enabled=true" label="Location/Room" max_length="100" name="location" type="string"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Timezone" mandatory="true" max_length="50" name="timezone" type="string">
+            <choice>
+                <element inactive_on_update="false" label="HKT (UTC+8)" sequence="6" value="hkt"/>
+                <element inactive_on_update="false" label="AEDT (UTC+11)" sequence="2" value="aedt"/>
+                <element inactive_on_update="false" label="SGT (UTC+8)" sequence="7" value="sgt"/>
+                <element inactive_on_update="false" label="JST (UTC+9)" sequence="3" value="jst"/>
+                <element inactive_on_update="false" label="PST (UTC-8)" sequence="8" value="pst"/>
+                <element inactive_on_update="false" label="UTC" sequence="0" value="utc"/>
+                <element inactive_on_update="false" label="KST (UTC+9)" sequence="4" value="kst"/>
+                <element inactive_on_update="false" label="EST (UTC-5)" sequence="9" value="est"/>
+                <element inactive_on_update="false" label="AEST (UTC+10)" sequence="1" value="aest"/>
+                <element inactive_on_update="false" label="IST (UTC+5:30)" sequence="5" value="ist"/>
+            </choice>
+        </element>
+    </element>
+</database>

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_module">
+    <sys_module action="INSERT_OR_UPDATE">
+        <content><![CDATA[(function process(request, response) {
+    response.setContentType('text/html');
+    response.setStatus(200);
+    
+    // Query real sessions data from the table
+    var sessions = [];
+    var gr = new GlideRecord('x_snc_ai_learnin_4_ai_sessions');
+    gr.orderBy('start_time');
+    gr.query();
+    
+    while (gr.next()) {
+        sessions.push({
+            title: gr.getValue('title') || 'Untitled Session',
+            presenter: gr.getValue('presenter') || 'TBD',
+            start_time: gr.getDisplayValue('start_time') || 'TBD',
+            end_time: gr.getDisplayValue('end_time') || 'TBD',
+            type: gr.getValue('session_type') || 'general',
+            description: gr.getValue('description') || 'No description available',
+            target_roles: gr.getDisplayValue('target_roles') || 'Others',
+            geo_area: gr.getDisplayValue('geo_major_area') || 'APAC All',
+            location: gr.getValue('location') || '',
+            virtual_link: gr.getValue('virtual_link') || '',
+            max_attendees: gr.getValue('max_attendees') || '',
+            prerequisites: gr.getValue('prerequisites') || '',
+            tags: gr.getValue('tags') || ''
+        });
+    }
+    
+    // Get dynamic role choices from role_choices table
+    var roleChoices = [];
+    var roleGr = new GlideRecord('x_snc_ai_learnin_4_role_choices');
+    roleGr.query();
+    while (roleGr.next()) {
+        roleChoices.push({
+            value: roleGr.getValue('name'),
+            label: roleGr.getValue('label')
+        });
+    }
+    
+    // Get dynamic geo choices from sys_choice table
+    var geoChoices = [];
+    var choiceGr = new GlideRecord('sys_choice');
+    choiceGr.addQuery('name', 'x_snc_ai_learnin_4_ai_sessions');
+    choiceGr.addQuery('element', 'geo_major_area');
+    choiceGr.orderBy('sequence');
+    choiceGr.query();
+    while (choiceGr.next()) {
+        geoChoices.push({
+            value: choiceGr.getValue('value'),
+            label: choiceGr.getValue('label')
+        });
+    }
+    
+    // Get dynamic session type choices from sys_choice table  
+    var typeChoices = [];
+    var typeGr = new GlideRecord('sys_choice');
+    typeGr.addQuery('name', 'x_snc_ai_learnin_4_ai_sessions');
+    typeGr.addQuery('element', 'session_type');
+    typeGr.orderBy('sequence');
+    typeGr.query();
+    while (typeGr.next()) {
+        typeChoices.push({
+            value: typeGr.getValue('value'),
+            label: typeGr.getValue('label')
+        });
+    }
+    
+    var sessionsJson = JSON.stringify(sessions);
+    var roleChoicesJson = JSON.stringify(roleChoices);
+    var geoChoicesJson = JSON.stringify(geoChoices);
+    var typeChoicesJson = JSON.stringify(typeChoices);
+    
+    var css = '*{box-sizing:border-box}body,html{margin:0;padding:0;font-family:system-ui,sans-serif;background:#f8f9fa;color:#1f2937;line-height:1.5}.app{min-height:100vh;padding:1rem}.app__header{margin-bottom:1.5rem;text-align:center;padding-bottom:1rem;border-bottom:2px solid #e5e7eb}.app__title{margin:0 0 0.5rem 0;font-size:2rem;font-weight:600;color:#1f2937}.app__subtitle{margin:0;font-size:1.125rem;color:#6b7280;font-weight:400}.app__content{display:grid;grid-template-columns:300px 1fr;gap:1.5rem;align-items:start}.filter-panel{background:#fff;border:1px solid #d1d5db;border-radius:8px;padding:1rem;height:fit-content}.filter-panel__header{display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem;padding-bottom:0.75rem;border-bottom:1px solid #d1d5db}.filter-panel__title{margin:0;font-size:1.25rem;font-weight:600;color:#1f2937}.btn{display:inline-flex;align-items:center;padding:0.375rem 0.75rem;border:1px solid #d1d5db;border-radius:6px;font-size:0.875rem;cursor:pointer;background:transparent;color:#1f2937;transition:background-color 100ms}.btn:hover{background:#f3f4f6}.filter-panel__content{display:flex;flex-direction:column;gap:1rem}.filter-group{display:flex;flex-direction:column;gap:0.5rem}.filter-label{font-weight:600;color:#1f2937;font-size:0.875rem;margin:0}.filter-select{height:2.5rem;padding:0 2.5rem 0 0.75rem;background:#fff;border:1px solid #d1d5db;border-radius:6px;color:#1f2937;font-size:1rem;cursor:pointer;appearance:none;background-image:url("data:image/svg+xml,%3csvg xmlns=\\"http://www.w3.org/2000/svg\\" fill=\\"none\\" viewBox=\\"0 0 20 20\\"%3e%3cpath stroke=\\"%236b7280\\" stroke-linecap=\\"round\\" stroke-linejoin=\\"round\\" stroke-width=\\"1.5\\" d=\\"M6 8l4 4 4-4\\"/>%3c/svg%3e");background-position:right 0.75rem center;background-repeat:no-repeat;background-size:1rem}.filter-select:focus{outline:none;border-color:#0ea5e9;box-shadow:0 0 0 1px #0ea5e9}.session-list{background:#fff;border:1px solid #d1d5db;border-radius:8px;padding:1rem;max-height:calc(100vh-200px);overflow-y:auto}.session-list__header{display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem;padding-bottom:0.75rem;border-bottom:1px solid #d1d5db}.session-list__title{margin:0;font-size:1.25rem;font-weight:600;color:#1f2937}.session-list__count{color:#6b7280;font-size:0.875rem}.session-list__legend{margin-bottom:1rem;padding:0.75rem;background:#f8f9fa;border:1px solid #e5e7eb;border-radius:6px}.session-list__legend-title{font-weight:600;color:#1f2937;font-size:0.875rem;margin-right:1rem}.session-list__legend-items{display:flex;flex-wrap:wrap;gap:1rem;margin-top:0.5rem}.session-list__legend-item{display:flex;align-items:center;gap:0.25rem;font-size:0.75rem;color:#6b7280}.session-list__legend-dot{width:0.75rem;height:0.75rem;border-radius:50%;flex-shrink:0}.session-card{border:1px solid #e5e7eb;border-radius:6px;padding:1rem;margin-bottom:0.75rem;cursor:pointer;transition:all 150ms;background:#fff}.session-card:hover{border-color:#0ea5e9;box-shadow:0 1px 3px rgba(0,0,0,0.1)}.session-card--selected{border-color:#0ea5e9;box-shadow:0 0 0 1px #0ea5e9}.session-card__header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:0.75rem}.session-card__title-row{display:flex;align-items:center;gap:0.5rem;flex:1}.session-card__geo-indicator{width:0.75rem;height:0.75rem;border-radius:50%;flex-shrink:0}.session-card__title{margin:0;font-size:1.125rem;font-weight:600;color:#1f2937}.session-card__badge{padding:0.25rem 0.5rem;border-radius:4px;font-size:0.75rem;font-weight:500;background:#fef3c7;color:#92400e}.session-card__meta{display:grid;grid-template-columns:1fr 1fr;gap:0.5rem;margin-bottom:0.75rem;font-size:0.875rem}.session-card__label{font-weight:600;color:#6b7280}.session-card__value{color:#1f2937}.session-card__description{margin-bottom:0.75rem;color:#4b5563;line-height:1.4}.session-card__details{font-size:0.875rem;color:#4b5563}.session-card__details > div{margin-bottom:0.5rem}.session-card__details > div:last-child{margin-bottom:0}.session-card__duration{margin-left:0.5rem;color:#6b7280;font-weight:normal}.session-card__link{color:#0ea5e9;text-decoration:none}.session-card__link:hover{text-decoration:underline}.session-card__tag-list{display:flex;flex-wrap:wrap;gap:0.25rem;margin-top:0.25rem}.session-card__tag{padding:0.125rem 0.375rem;background:#e5e7eb;color:#4b5563;border-radius:4px;font-size:0.75rem}.session-list__empty{text-align:center;padding:2rem;color:#6b7280}@media(max-width:1024px){.app__content{grid-template-columns:1fr;gap:1rem}.session-list{max-height:60vh}}';
+    
+    var js = 'const sessions=' + sessionsJson + ';' +
+    'const roleChoices=' + roleChoicesJson + ';' +
+    'const geoChoices=' + geoChoicesJson + ';' +
+    'const typeChoices=' + typeChoicesJson + ';' +
+    'const geoColors={"asia and korea":"#FFB6C1","anz":"#9B59B6","india":"#2ECC71","japan":"#E74C3C","apac all":"#3498DB","apac":"#3498DB"};' +
+    'function formatDateTime(dt){if(!dt||dt==="TBD")return"TBD";try{const d=new Date(dt);return d.toLocaleString("en-US",{month:"short",day:"numeric",year:"numeric",hour:"numeric",minute:"2-digit",hour12:true})}catch(e){return dt}}' +
+    'function formatDuration(start,end){if(!start||!end||start==="TBD"||end==="TBD")return"";try{const s=new Date(start),e=new Date(end),mins=Math.round((e-s)/(1000*60));return mins<60?mins+"min":Math.floor(mins/60)+"h"+(mins%60>0?" "+(mins%60)+"m":"")}catch(e){return""}}' +
+    'function displaySessions(list){const container=document.getElementById("sessions"),count=document.getElementById("sessionCount");count.textContent=list.length+" session"+(list.length!==1?"s":"")+" found";if(list.length===0){container.innerHTML="<div class=\\"session-list__empty\\"><p>No sessions match your current filters.</p><p>Try adjusting your filter criteria or clearing all filters to see available sessions.</p></div>";return;}' +
+    'container.innerHTML=list.map(s=>{const geoColor=geoColors[s.geo_area.toLowerCase()]||"#95A5A6";const geoName=s.geo_area;const typeChoice=typeChoices.find(t=>t.value===s.type);const typeName=typeChoice?typeChoice.label:s.type;const roleName=s.target_roles;const duration=formatDuration(s.start_time,s.end_time);return"<div class=\\"session-card\\"><div class=\\"session-card__header\\"><div class=\\"session-card__title-row\\"><div class=\\"session-card__geo-indicator\\" style=\\"background-color:"+geoColor+"\\" title=\\""+geoName+"\\"></div><h3 class=\\"session-card__title\\">"+s.title+"</h3></div></div><div class=\\"session-card__meta\\"><div><span class=\\"session-card__label\\">Type:</span> <span class=\\"session-card__value\\">"+typeName+"</span></div><div><span class=\\"session-card__label\\">Role:</span> <span class=\\"session-card__value\\">"+roleName+"</span></div><div><span class=\\"session-card__label\\">Geo / Major Area:</span> <span class=\\"session-card__value\\">"+geoName+"</span></div></div>"+(s.description?"<div class=\\"session-card__description\\">"+(s.description.length>200?s.description.substring(0,200)+"...":s.description)+"</div>":"")+"<div class=\\"session-card__details\\"><div><strong>Start:</strong> "+formatDateTime(s.start_time)+(duration?" <span class=\\"session-card__duration\\">("+duration+")</span>":"")+"</div>"+(s.presenter?"<div><strong>Presenter:</strong> "+s.presenter+"</div>":"")+(s.location?"<div><strong>Location:</strong> "+s.location+"</div>":"")+(s.virtual_link?"<div><strong>Virtual Link:</strong> <a href=\\""+s.virtual_link+"\\" target=\\"_blank\\" class=\\"session-card__link\\">Join Meeting</a></div>":"")+(s.max_attendees?"<div><strong>Max Attendees:</strong> "+s.max_attendees+"</div>":"")+(s.prerequisites?"<div><strong>Prerequisites:</strong> "+s.prerequisites+"</div>":"")+(s.tags?"<div><strong>Tags:</strong> <div class=\\"session-card__tag-list\\">"+s.tags.split(",").map(tag=>"<span class=\\"session-card__tag\\">"+tag.trim()+"</span>").join("")+"</div></div>":"")+"</div></div>"}).join("");}' +
+    'function filterSessions(){const role=document.getElementById("roleFilter").value,geo=document.getElementById("geoFilter").value,type=document.getElementById("typeFilter").value;const filtered=sessions.filter(s=>{const matchesRole=!role||s.target_roles.toLowerCase().includes(role.toLowerCase());const matchesGeo=!geo||s.geo_area.toLowerCase()===geo.toLowerCase();const matchesType=!type||s.type===type;return matchesRole&&matchesGeo&&matchesType});displaySessions(filtered);}' +
+    'function clearFilters(){document.getElementById("roleFilter").value="";document.getElementById("geoFilter").value="";document.getElementById("typeFilter").value="";displaySessions(sessions);}' +
+    'function initializeFilters(){const roleSelect=document.getElementById("roleFilter");roleChoices.forEach(role=>roleSelect.insertAdjacentHTML("beforeend","<option value=\\""+role.label+"\\">"+role.label+"</option>"));const geoSelect=document.getElementById("geoFilter");geoChoices.forEach(geo=>geoSelect.insertAdjacentHTML("beforeend","<option value=\\""+geo.label+"\\">"+geo.label+"</option>"));const typeSelect=document.getElementById("typeFilter");typeChoices.forEach(type=>typeSelect.insertAdjacentHTML("beforeend","<option value=\\""+type.value+"\\">"+type.label+"</option>"))}' +
+    'initializeFilters();displaySessions(sessions);';
+    
+    var html = '<!DOCTYPE html><html><head><title>APAC AI Learning Day Agenda</title><style>' + css + '</style></head><body>' +
+        '<div class="app">' +
+        '<div class="app__header">' +
+        '<h1 class="app__title">APAC AI Learning Day Apr 10th Sales Agenda</h1>' +
+        '<p class="app__subtitle">Explore sessions tailored to your role, region, and interests</p>' +
+        '</div>' +
+        '<div class="app__content">' +
+        '<div class="filter-panel">' +
+        '<div class="filter-panel__header">' +
+        '<h2 class="filter-panel__title">Filter Sessions</h2>' +
+        '<button class="btn" onclick="clearFilters()">Clear All</button>' +
+        '</div>' +
+        '<div class="filter-panel__content">' +
+        '<div class="filter-group">' +
+        '<label class="filter-label">By Role</label>' +
+        '<select class="filter-select" id="roleFilter" onchange="filterSessions()">' +
+        '<option value="">All Roles</option>' +
+        '</select>' +
+        '</div>' +
+        '<div class="filter-group">' +
+        '<label class="filter-label">Geo / Major Area</label>' +
+        '<select class="filter-select" id="geoFilter" onchange="filterSessions()">' +
+        '<option value="">All Areas</option>' +
+        '</select>' +
+        '</div>' +
+        '<div class="filter-group">' +
+        '<label class="filter-label">By Session Type</label>' +
+        '<select class="filter-select" id="typeFilter" onchange="filterSessions()">' +
+        '<option value="">All Session Types</option>' +
+        '</select>' +
+        '</div>' +
+        '</div>' +
+        '</div>' +
+        '<div class="session-list">' +
+        '<div class="session-list__header">' +
+        '<h2 class="session-list__title">Session Details</h2>' +
+        '<div class="session-list__count" id="sessionCount">0 sessions found</div>' +
+        '</div>' +
+        '<div class="session-list__legend">' +
+        '<span class="session-list__legend-title">Geo / Major Area:</span>' +
+        '<div class="session-list__legend-items">' +
+        '<div class="session-list__legend-item"><div class="session-list__legend-dot" style="background-color:#FFB6C1"></div><span>Asia & Korea</span></div>' +
+        '<div class="session-list__legend-item"><div class="session-list__legend-dot" style="background-color:#9B59B6"></div><span>ANZ</span></div>' +
+        '<div class="session-list__legend-item"><div class="session-list__legend-dot" style="background-color:#2ECC71"></div><span>India</span></div>' +
+        '<div class="session-list__legend-item"><div class="session-list__legend-dot" style="background-color:#E74C3C"></div><span>Japan</span></div>' +
+        '<div class="session-list__legend-item"><div class="session-list__legend-dot" style="background-color:#3498DB"></div><span>APAC All</span></div>' +
+        '</div>' +
+        '</div>' +
+        '<div class="session-list__content" id="sessions"></div>' +
+        '</div>' +
+        '</div>' +
+        '</div>' +
+        '<script>' + js + '</script>' +
+        '</body></html>';
+    
+    var writer = response.getStreamWriter();
+    writer.writeString(html);
+})(request, response);]]></content>
+        <external_source>false</external_source>
+        <path>x_snc_ai_learnin_4/x-snc-ai-learning-day-agenda-builder/1.0.0/src/server/rest-api/public_agenda_script.js</path>
+        <sys_class_name>sys_module</sys_class_name>
+        <sys_created_by>leo.francia@snc</sys_created_by>
+        <sys_created_on>2026-03-31 11:24:23</sys_created_on>
+        <sys_id>a0bdd6af5746424c9454a998c78ab87a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_snc_ai_learnin_4/x-snc-ai-learning-day-agenda-builder/1.0.0/src/server/rest-api/public_agenda_script.js</sys_name>
+        <sys_package display_value="AI Learning Day Agenda Builder" source="x_snc_ai_learnin_4">e8e23e7093f37a908381f8bcdd03d6a3</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AI Learning Day Agenda Builder">e8e23e7093f37a908381f8bcdd03d6a3</sys_scope>
+        <sys_update_name>sys_module_a0bdd6af5746424c9454a998c78ab87a</sys_update_name>
+        <sys_updated_by>leo.francia@snc</sys_updated_by>
+        <sys_updated_on>2026-03-31 11:24:23</sys_updated_on>
+    </sys_module>
+</record_update>

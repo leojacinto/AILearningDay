@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="name" label="Role Name" language="en" table="x_snc_ai_learnin_4_role_choices">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>name</element>
+            <help/>
+            <hint/>
+            <label>Role Name</label>
+            <language>en</language>
+            <name>x_snc_ai_learnin_4_role_choices</name>
+            <plural>Role Names</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-03-21 02:01:57</sys_created_on>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Role Name</sys_name>
+            <sys_package display_value="AI Learning Day Agenda Builder" source="x_snc_ai_learnin_4">e8e23e7093f37a908381f8bcdd03d6a3</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="AI Learning Day Agenda Builder">e8e23e7093f37a908381f8bcdd03d6a3</sys_scope>
+            <sys_update_name>sys_documentation_x_snc_ai_learnin_4_role_choices_name_en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-03-21 02:01:57</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_page">
+    <sp_page action="INSERT_OR_UPDATE">
+        <category/>
+        <css>
+      .container-fluid {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+      
+      .page-header {
+        text-align: center;
+        margin-bottom: 30px;
+        padding-bottom: 20px;
+        border-bottom: 2px solid #e7e7e7;
+      }
+      
+      .page-header h1 {
+        color: #333;
+        margin-bottom: 10px;
+      }
+      
+      .page-header p {
+        color: #666;
+        font-size: 16px;
+      }
+    </css>
+        <draft>false</draft>
+        <dynamic_title_structure/>
+        <human_readable_url_structure/>
+        <id>ai_learning_agenda</id>
+        <internal>false</internal>
+        <omit_watcher>false</omit_watcher>
+        <public>true</public>
+        <roles/>
+        <seo_script/>
+        <short_description>Browse and filter AI Learning Day sessions</short_description>
+        <sys_class_name>sp_page</sys_class_name>
+        <sys_created_by>leo.francia@snc</sys_created_by>
+        <sys_created_on>2026-03-31 02:34:15</sys_created_on>
+        <sys_id>f7f28bcaca8a4e8a8bc73a23189b0596</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>ai_learning_agenda</sys_name>
+        <sys_package display_value="AI Learning Day Agenda Builder" source="x_snc_ai_learnin_4">e8e23e7093f37a908381f8bcdd03d6a3</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AI Learning Day Agenda Builder">e8e23e7093f37a908381f8bcdd03d6a3</sys_scope>
+        <sys_update_name>sp_page_f7f28bcaca8a4e8a8bc73a23189b0596</sys_update_name>
+        <sys_updated_by>leo.francia@snc</sys_updated_by>
+        <sys_updated_on>2026-03-31 02:34:15</sys_updated_on>
+        <title>AI Learning Day Agenda</title>
+        <use_seo_script>false</use_seo_script>
+    </sp_page>
+    <sys_translated_text action="delete_multiple" query="documentkey=f7f28bcaca8a4e8a8bc73a23189b0596"/>
+</record_update>
