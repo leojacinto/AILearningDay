@@ -169,23 +169,41 @@ export const ai_sessions_public_read_acl = Acl({
 ### **5. Professional Frontend Design with Date Range UI**
 
 **Layout Architecture:**
-```
-┌─────────────────────────────────────────────────────────────────┐
-│                        Header & Title                          │
-├─────────────────────┬───────────────────────────────────────────┤
-│   Filter Panel      │           Session List                    │
-│   ┌─────────────┐   │   ┌─────────────────────────────────┐     │
-│   │ DATE RANGE  │   │   │ [Title] + Color Indicator       │     │
-│   │ [Start Date]│   │   │ [Description]                   │     │
-│   │ [End Date]  │   │   │ ┌─────────┬─────────┬─────────┐ │     │
-│   │ [Apply]     │   │   │ │  Role   │  Type   │   Geo   │ │     │
-│   │             │   │   │ ├─────────┼─────────┼─────────┤ │     │
-│   │ By Role     │   │   │ │  Time   │Presenter│Location │ │     │
-│   │ By Geography│   │   │ └─────────┴─────────┴─────────┘ │     │
-│   │ By Type     │   │   │ [Additional Details]            │     │
-│   │ [Clear All] │   │   └─────────────────────────────────┘     │
-│   └─────────────┘   │                                           │
-└─────────────────────┴───────────────────────────────────────────┘
+```mermaid
+block-beta
+    columns 3
+    Header["Header & Title"]:3
+
+    block:FilterPanel:1
+        columns 1
+        DR["DATE RANGE"]
+        SD["Start Date"]
+        ED["End Date"]
+        Apply["Apply"]
+        FR["By Role"]
+        FG["By Geography"]
+        FT["By Type"]
+        Clear["Clear All"]
+    end
+
+    block:SessionList:2
+        columns 1
+        Title["Title + Color Indicator"]
+        Desc["Description"]
+        block:MetaRow1
+            columns 3
+            Role["Role"]
+            Type["Type"]
+            Geo["Geo"]
+        end
+        block:MetaRow2
+            columns 3
+            Time["Time"]
+            Presenter["Presenter"]
+            Location["Location"]
+        end
+        Details["Additional Details"]
+    end
 ```
 
 **Date Input Styling:**
