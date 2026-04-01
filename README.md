@@ -170,26 +170,39 @@ export const ai_sessions_public_read_acl = Acl({
 
 **Layout Architecture:**
 ```mermaid
-flowchart TD
-    Header["Header & Title"]
-    Header --> FilterPanel
-    Header --> SessionList
+block-beta
+    columns 3
+    Header["Header & Title"]:3
 
-    subgraph FilterPanel["Filter Panel"]
-        DR["DATE RANGE"] --> SD["Start Date"]
-        SD --> ED["End Date"]
-        ED --> Apply["Apply"]
-        Apply --> FR["By Role"]
-        FR --> FG["By Geography"]
-        FG --> FT["By Type"]
-        FT --> Clear["Clear All"]
+    block:FilterPanel:1
+        columns 1
+        DR["DATE RANGE"]
+        SD["Start Date"]
+        ED["End Date"]
+        Apply["Apply"]
+        FR["By Role"]
+        FG["By Geography"]
+        FT["By Type"]
+        Clear["Clear All"]
     end
 
-    subgraph SessionList["Session List"]
-        Title["Title + Color Indicator"] --> Desc["Description"]
-        Desc --> Meta1["Role | Type | Geo"]
-        Meta1 --> Meta2["Time | Presenter | Location"]
-        Meta2 --> Details["Additional Details"]
+    block:SessionList:2
+        columns 1
+        Title["Title + Color Indicator"]
+        Desc["Description"]
+        block:MetaRow1
+            columns 3
+            Role["Role"]
+            Type["Type"]
+            Geo["Geo"]
+        end
+        block:MetaRow2
+            columns 3
+            Time["Time"]
+            Presenter["Presenter"]
+            Location["Location"]
+        end
+        Details["Additional Details"]
     end
 ```
 
