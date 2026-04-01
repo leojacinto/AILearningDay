@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_module">
+    <sys_module action="INSERT_OR_UPDATE">
+        <content><![CDATA[var UpdateApacChoiceLabel = Class.create();
+UpdateApacChoiceLabel.prototype = {
+  initialize: function() {
+    // Auto-run update on instantiation
+    this.updateLabel();
+  },
+  
+  updateLabel: function() {
+    gs.info('=== UPDATING APAC Choice Label ===');
+    
+    try {
+      // Update the sys_choice record directly
+      var choiceGR = new GlideRecord('sys_choice');
+      choiceGR.addQuery('name', 'x_snc_ai_learnin_4_ai_sessions');
+      choiceGR.addQuery('element', 'geo_major_area');
+      choiceGR.addQuery('value', 'apac_general');
+      choiceGR.query();
+      
+      if (choiceGR.next()) {
+        gs.info('Found choice record with current label: ' + choiceGR.getValue('label'));
+        
+        // Only update if it's still "APAC General"
+        if (choiceGR.getValue('label') === 'APAC General') {
+          // Update the label
+          choiceGR.setValue('label', 'APAC All');
+          var updated = choiceGR.update();
+          
+          if (updated) {
+            gs.info('✅ Successfully updated choice label to: APAC All');
+            return { success: true, message: 'Choice label updated from "APAC General" to "APAC All"' };
+          } else {
+            gs.error('❌ Failed to update choice label');
+            return { success: false, message: 'Failed to update choice label' };
+          }
+        } else {
+          gs.info('✅ Choice label is already "' + choiceGR.getValue('label') + '"');
+          return { success: true, message: 'Choice label already updated to "' + choiceGR.getValue('label') + '"' };
+        }
+      } else {
+        gs.error('❌ Choice record not found');
+        return { success: false, message: 'Choice record not found' };
+      }
+    } catch (e) {
+      gs.error('❌ Exception: ' + e.message);
+      return { success: false, message: 'Exception: ' + e.message };
+    }
+  },
+  
+  type: 'UpdateApacChoiceLabel'
+};]]></content>
+        <external_source>false</external_source>
+        <path>x_snc_ai_learnin_4/x-snc-ai-learning-day-agenda-builder/1.0.0/src/server/choice-cleanup/update-apac-label.js</path>
+        <sys_class_name>sys_module</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-03-21 15:57:04</sys_created_on>
+        <sys_id>03c431c3640248c8b026b1bb2e14a2f1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_snc_ai_learnin_4/x-snc-ai-learning-day-agenda-builder/1.0.0/src/server/choice-cleanup/update-apac-label.js</sys_name>
+        <sys_package display_value="AI Learning Day Agenda Builder" source="x_snc_ai_learnin_4">e8e23e7093f37a908381f8bcdd03d6a3</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AI Learning Day Agenda Builder">e8e23e7093f37a908381f8bcdd03d6a3</sys_scope>
+        <sys_update_name>sys_module_03c431c3640248c8b026b1bb2e14a2f1</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-03-21 15:57:04</sys_updated_on>
+    </sys_module>
+</record_update>

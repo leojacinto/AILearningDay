@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="role" table="x_snc_ai_learnin_4_ai_sessions" version="3">
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>role</element>
+            <name>x_snc_ai_learnin_4_ai_sessions</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-03-21 00:01:47</sys_created_on>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>role</sys_name>
+            <sys_package display_value="AI Learning Day Agenda Builder" source="x_snc_ai_learnin_4">e8e23e7093f37a908381f8bcdd03d6a3</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="AI Learning Day Agenda Builder">e8e23e7093f37a908381f8bcdd03d6a3</sys_scope>
+            <sys_update_name>sys_choice_x_snc_ai_learnin_4_ai_sessions_role</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-03-21 00:01:47</sys_updated_on>
+        </sys_choice_set>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>role</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>AE</label>
+            <language>en</language>
+            <name>x_snc_ai_learnin_4_ai_sessions</name>
+            <sequence>1</sequence>
+            <synonyms/>
+            <sys_created_by>leo.francia@snc</sys_created_by>
+            <sys_created_on>2026-03-26 03:15:41</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>leo.francia@snc</sys_updated_by>
+            <sys_updated_on>2026-03-26 03:15:41</sys_updated_on>
+            <value>ae</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>role</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>AE</label>
+            <language>en</language>
+            <name>x_snc_ai_learnin_4_ai_sessions</name>
+            <sequence>1</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-03-21 00:41:36</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-03-21 00:41:36</sys_updated_on>
+            <value>ae</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>role</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>SSE</label>
+            <language>en</language>
+            <name>x_snc_ai_learnin_4_ai_sessions</name>
+            <sequence>2</sequence>
+            <synonyms/>
+            <sys_created_by>leo.francia@snc</sys_created_by>
+            <sys_created_on>2026-03-26 03:15:41</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>leo.francia@snc</sys_updated_by>
+            <sys_updated_on>2026-03-26 03:15:41</sys_updated_on>
+            <value>sse</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>role</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>SSE</label>
+            <language>en</language>
+            <name>x_snc_ai_learnin_4_ai_sessions</name>
+            <sequence>2</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-03-21 00:41:36</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-03-21 00:41:36</sys_updated_on>
+            <value>sse</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>role</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>SC</label>
+            <language>en</language>
+            <name>x_snc_ai_learnin_4_ai_sessions</name>
+            <sequence>3</sequence>
+            <synonyms/>
+            <sys_created_by>leo.francia@snc</sys_created_by>
+            <sys_created_on>2026-03-26 03:15:41</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>leo.francia@snc</sys_updated_by>
+            <sys_updated_on>2026-03-26 03:15:41</sys_updated_on>
+            <value>sc</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>role</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>SC</label>
+            <language>en</language>
+            <name>x_snc_ai_learnin_4_ai_sessions</name>
+            <sequence>3</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-03-21 00:41:36</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-03-21 00:41:36</sys_updated_on>
+            <value>sc</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>role</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>SSC</label>
+            <language>en</language>
+            <name>x_snc_ai_learnin_4_ai_sessions</name>
+            <sequence>4</sequence>
+            <synonyms/>
+            <sys_created_by>leo.francia@snc</sys_created_by>
+            <sys_created_on>2026-03-26 03:15:41</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>leo.francia@snc</sys_updated_by>
+            <sys_updated_on>2026-03-26 03:15:41</sys_updated_on>
+            <value>ssc</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>role</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>SSC</label>
+            <language>en</language>
+            <name>x_snc_ai_learnin_4_ai_sessions</name>
+            <sequence>4</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-03-21 00:41:36</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-03-21 00:41:36</sys_updated_on>
+            <value>ssc</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>role</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>GPC</label>
+            <language>en</language>
+            <name>x_snc_ai_learnin_4_ai_sessions</name>
+            <sequence>5</sequence>
+            <synonyms/>
+            <sys_created_by>leo.francia@snc</sys_created_by>
+            <sys_created_on>2026-03-26 03:15:41</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>leo.francia@snc</sys_updated_by>
+            <sys_updated_on>2026-03-26 03:15:41</sys_updated_on>
+            <value>gpc</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>role</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>GPC</label>
+            <language>en</language>
+            <name>x_snc_ai_learnin_4_ai_sessions</name>
+            <sequence>5</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-03-21 00:41:36</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-03-21 00:41:36</sys_updated_on>
+            <value>gpc</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>role</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>All Roles</label>
+            <language>en</language>
+            <name>x_snc_ai_learnin_4_ai_sessions</name>
+            <sequence>6</sequence>
+            <synonyms/>
+            <sys_created_by>leo.francia@snc</sys_created_by>
+            <sys_created_on>2026-03-26 03:15:41</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>leo.francia@snc</sys_updated_by>
+            <sys_updated_on>2026-03-26 03:15:41</sys_updated_on>
+            <value>all</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>role</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>All Roles</label>
+            <language>en</language>
+            <name>x_snc_ai_learnin_4_ai_sessions</name>
+            <sequence>6</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-03-21 00:01:47</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-03-21 00:01:47</sys_updated_on>
+            <value>all</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>role</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>CRM SE</label>
+            <language>en</language>
+            <name>x_snc_ai_learnin_4_ai_sessions</name>
+            <sequence>6</sequence>
+            <synonyms/>
+            <sys_created_by>leo.francia@snc</sys_created_by>
+            <sys_created_on>2026-03-26 03:15:41</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>leo.francia@snc</sys_updated_by>
+            <sys_updated_on>2026-03-26 03:15:41</sys_updated_on>
+            <value>crm_se</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>role</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>CRM SE</label>
+            <language>en</language>
+            <name>x_snc_ai_learnin_4_ai_sessions</name>
+            <sequence>6</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-03-21 00:41:36</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-03-21 00:41:36</sys_updated_on>
+            <value>crm_se</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>role</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Others</label>
+            <language>en</language>
+            <name>x_snc_ai_learnin_4_ai_sessions</name>
+            <sequence>7</sequence>
+            <synonyms/>
+            <sys_created_by>leo.francia@snc</sys_created_by>
+            <sys_created_on>2026-03-26 03:15:41</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>leo.francia@snc</sys_updated_by>
+            <sys_updated_on>2026-03-26 03:15:41</sys_updated_on>
+            <value>others</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>role</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Others</label>
+            <language>en</language>
+            <name>x_snc_ai_learnin_4_ai_sessions</name>
+            <sequence>7</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-03-21 00:41:36</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-03-21 00:41:36</sys_updated_on>
+            <value>others</value>
+        </sys_choice>
+    </sys_choice>
+</record_update>

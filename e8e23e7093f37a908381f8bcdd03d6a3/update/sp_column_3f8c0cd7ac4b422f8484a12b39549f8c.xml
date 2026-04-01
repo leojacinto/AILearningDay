@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_column">
+    <sp_column action="INSERT_OR_UPDATE">
+        <class_name>col-md-12</class_name>
+        <order>1</order>
+        <semantic_tag/>
+        <size>12</size>
+        <size_lg/>
+        <size_sm/>
+        <size_xs/>
+        <sp_row display_value="1">6aed9c7b97ee4442bad44493e6ca93dc</sp_row>
+        <sys_class_name>sp_column</sys_class_name>
+        <sys_created_by>leo.francia@snc</sys_created_by>
+        <sys_created_on>2026-03-31 02:34:15</sys_created_on>
+        <sys_id>3f8c0cd7ac4b422f8484a12b39549f8c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>1</sys_name>
+        <sys_package display_value="AI Learning Day Agenda Builder" source="x_snc_ai_learnin_4">e8e23e7093f37a908381f8bcdd03d6a3</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AI Learning Day Agenda Builder">e8e23e7093f37a908381f8bcdd03d6a3</sys_scope>
+        <sys_update_name>sp_column_3f8c0cd7ac4b422f8484a12b39549f8c</sys_update_name>
+        <sys_updated_by>leo.francia@snc</sys_updated_by>
+        <sys_updated_on>2026-03-31 02:34:15</sys_updated_on>
+    </sp_column>
+</record_update>

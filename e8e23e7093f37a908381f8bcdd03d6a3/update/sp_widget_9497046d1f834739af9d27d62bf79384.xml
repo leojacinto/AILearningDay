@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category/>
+        <client_script/>
+        <controller_as/>
+        <css/>
+        <data_table>x_snc_ai_learnin_4_ai_sessions</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>false</has_preview>
+        <id>simple_test</id>
+        <internal>false</internal>
+        <link/>
+        <name>Simple Test Widget</name>
+        <option_schema/>
+        <public>true</public>
+        <roles/>
+        <script><![CDATA[
+      (function() {
+        data.status = 'Script Executed';
+        data.debug = 'Starting...';
+        data.count = 0;
+        data.sessions = [];
+        
+        try {
+          data.debug = 'Attempting to query table...';
+          var gr = new GlideRecord('x_snc_ai_learnin_4_ai_sessions');
+          gr.query();
+          
+          var count = gr.getRowCount();
+          data.count = count;
+          data.debug = 'Query executed, found ' + count + ' records';
+          
+          if (count > 0) {
+            gr.query(); // Query again to iterate
+            var sessions = [];
+            var recordCount = 0;
+            while (gr.next() && recordCount < 5) {
+              sessions.push({
+                title: {
+                  display_value: gr.getDisplayValue('title') || 'No Title',
+                  value: gr.getValue('title') || ''
+                }
+              });
+              recordCount++;
+            }
+            data.sessions = sessions;
+            data.debug = 'Successfully loaded ' + sessions.length + ' sessions';
+          }
+          
+        } catch (error) {
+          data.status = 'ERROR';
+          data.debug = 'Error: ' + error.toString();
+          data.count = -1;
+        }
+      })();
+    ]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>leo.francia@snc</sys_created_by>
+        <sys_created_on>2026-03-31 08:06:36</sys_created_on>
+        <sys_id>9497046d1f834739af9d27d62bf79384</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Simple Test Widget</sys_name>
+        <sys_package display_value="AI Learning Day Agenda Builder" source="x_snc_ai_learnin_4">e8e23e7093f37a908381f8bcdd03d6a3</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AI Learning Day Agenda Builder">e8e23e7093f37a908381f8bcdd03d6a3</sys_scope>
+        <sys_update_name>sp_widget_9497046d1f834739af9d27d62bf79384</sys_update_name>
+        <sys_updated_by>leo.francia@snc</sys_updated_by>
+        <sys_updated_on>2026-03-31 08:06:36</sys_updated_on>
+        <template><![CDATA[
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h3 class="panel-title">Simple Test Widget</h3>
+        </div>
+        <div class="panel-body">
+          <p><strong>Server Script Status:</strong> {{data.status}}</p>
+          <p><strong>Debug Info:</strong> {{data.debug}}</p>
+          <p><strong>Session Count:</strong> {{data.count}}</p>
+          <div ng-if="data.sessions">
+            <h4>Sessions Found:</h4>
+            <ul>
+              <li ng-repeat="session in data.sessions">{{session.title.display_value || session.title}}</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    ]]></template>
+    </sp_widget>
+</record_update>

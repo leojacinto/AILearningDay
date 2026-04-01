@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ws_definition">
+    <sys_ws_definition action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <base_uri>/api/x_snc_ai_learnin_4/public_agenda</base_uri>
+        <consumes>application/json,application/xml,text/xml</consumes>
+        <consumes_customized>false</consumes_customized>
+        <default_version>No active default version</default_version>
+        <doc_link/>
+        <enforce_acl>cf9d01d3e73003009d6247e603f6a990</enforce_acl>
+        <is_versioned>false</is_versioned>
+        <name>Public AI Agenda API</name>
+        <namespace>x_snc_ai_learnin_4</namespace>
+        <produces>application/json,application/xml,text/xml</produces>
+        <produces_customized>false</produces_customized>
+        <service_id>public_agenda</service_id>
+        <short_description/>
+        <sys_class_name>sys_ws_definition</sys_class_name>
+        <sys_created_by>leo.francia@snc</sys_created_by>
+        <sys_created_on>2026-03-31 08:47:29</sys_created_on>
+        <sys_id>75f4d1439d9d40de93a09f2d29b6411c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Public AI Agenda API</sys_name>
+        <sys_package display_value="AI Learning Day Agenda Builder" source="x_snc_ai_learnin_4">e8e23e7093f37a908381f8bcdd03d6a3</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AI Learning Day Agenda Builder">e8e23e7093f37a908381f8bcdd03d6a3</sys_scope>
+        <sys_update_name>sys_ws_definition_75f4d1439d9d40de93a09f2d29b6411c</sys_update_name>
+        <sys_updated_by>leo.francia@snc</sys_updated_by>
+        <sys_updated_on>2026-03-31 08:47:29</sys_updated_on>
+    </sys_ws_definition>
+</record_update>

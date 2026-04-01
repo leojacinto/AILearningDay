@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_container">
+    <sp_container action="INSERT_OR_UPDATE">
+        <background_color/>
+        <background_image/>
+        <background_style/>
+        <bootstrap_alt>false</bootstrap_alt>
+        <class_name>container-fluid</class_name>
+        <container_class_name/>
+        <name>AI Learning Agenda Container</name>
+        <order>1</order>
+        <semantic_tag/>
+        <sp_page display_value="ai_learning_agenda">f7f28bcaca8a4e8a8bc73a23189b0596</sp_page>
+        <subheader>false</subheader>
+        <sys_class_name>sp_container</sys_class_name>
+        <sys_created_by>leo.francia@snc</sys_created_by>
+        <sys_created_on>2026-03-31 02:34:15</sys_created_on>
+        <sys_id>fa84b77fac584b4192a809d76c84225e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>AI Learning Agenda Container</sys_name>
+        <sys_package display_value="AI Learning Day Agenda Builder" source="x_snc_ai_learnin_4">e8e23e7093f37a908381f8bcdd03d6a3</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AI Learning Day Agenda Builder">e8e23e7093f37a908381f8bcdd03d6a3</sys_scope>
+        <sys_update_name>sp_container_fa84b77fac584b4192a809d76c84225e</sys_update_name>
+        <sys_updated_by>leo.francia@snc</sys_updated_by>
+        <sys_updated_on>2026-03-31 02:34:15</sys_updated_on>
+        <title>AI Learning Day Agenda</title>
+        <width/>
+    </sp_container>
+</record_update>

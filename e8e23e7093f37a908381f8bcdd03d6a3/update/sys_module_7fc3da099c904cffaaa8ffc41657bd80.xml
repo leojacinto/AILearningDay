@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_module">
+    <sys_module action="INSERT_OR_UPDATE">
+        <content><![CDATA[import { gs, GlideRecord } from '@servicenow/glide'
+
+export function cleanupSessionTypeChoices() {
+    // Define the session types we want to keep (matching the filter interface)
+    const keepChoices = [
+        'ma_kickoff',
+        'webinar_live', 
+        'elearning_self_paced',
+        'colab',
+        'in_person_discussion',
+        'blocked_learning_time'
+    ];
+    
+    const tableName = 'x_snc_ai_learnin_4_ai_sessions';
+    const elementName = 'session_type';
+    
+    // Find and delete unwanted choices
+    const gr = new GlideRecord('sys_choice');
+    gr.addQuery('name', tableName);
+    gr.addQuery('element', elementName);
+    gr.addQuery('value', 'NOT IN', keepChoices.join(','));
+    gr.query();
+    
+    let deletedCount = 0;
+    while (gr.next()) {
+        gs.info(`Deleting choice: ${gr.getValue('value')} - ${gr.getValue('label')}`);
+        gr.deleteRecord();
+        deletedCount++;
+    }
+    
+    gs.info(`Cleanup complete. Deleted ${deletedCount} unwanted session type choices.`);
+    return `Deleted ${deletedCount} unwanted choices`;
+}]]></content>
+        <external_source>false</external_source>
+        <path>x_snc_ai_learnin_4/x-snc-ai-learning-day-agenda-builder/1.0.0/src/server/choice-cleanup/session-type-cleanup.js</path>
+        <sys_class_name>sys_module</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-03-21 13:26:52</sys_created_on>
+        <sys_id>7fc3da099c904cffaaa8ffc41657bd80</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_snc_ai_learnin_4/x-snc-ai-learning-day-agenda-builder/1.0.0/src/server/choice-cleanup/session-type-cleanup.js</sys_name>
+        <sys_package display_value="AI Learning Day Agenda Builder" source="x_snc_ai_learnin_4">e8e23e7093f37a908381f8bcdd03d6a3</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AI Learning Day Agenda Builder">e8e23e7093f37a908381f8bcdd03d6a3</sys_scope>
+        <sys_update_name>sys_module_7fc3da099c904cffaaa8ffc41657bd80</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-03-21 13:26:52</sys_updated_on>
+    </sys_module>
+</record_update>

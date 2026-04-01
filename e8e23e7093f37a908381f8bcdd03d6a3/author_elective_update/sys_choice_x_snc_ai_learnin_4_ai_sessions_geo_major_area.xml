@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="geo_major_area" table="x_snc_ai_learnin_4_ai_sessions" version="3">
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>geo_major_area</element>
+            <name>x_snc_ai_learnin_4_ai_sessions</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-03-21 03:37:25</sys_created_on>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>geo_major_area</sys_name>
+            <sys_package display_value="AI Learning Day Agenda Builder" source="x_snc_ai_learnin_4">e8e23e7093f37a908381f8bcdd03d6a3</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="AI Learning Day Agenda Builder">e8e23e7093f37a908381f8bcdd03d6a3</sys_scope>
+            <sys_update_name>sys_choice_x_snc_ai_learnin_4_ai_sessions_geo_major_area</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-03-21 03:37:25</sys_updated_on>
+        </sys_choice_set>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>geo_major_area</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Asia and Korea</label>
+            <language>en</language>
+            <name>x_snc_ai_learnin_4_ai_sessions</name>
+            <sequence>0</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-03-21 03:37:25</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-03-21 03:37:25</sys_updated_on>
+            <value>asia_korea</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>geo_major_area</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>ANZ</label>
+            <language>en</language>
+            <name>x_snc_ai_learnin_4_ai_sessions</name>
+            <sequence>1</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-03-21 03:37:25</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-03-21 03:37:25</sys_updated_on>
+            <value>anz</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>geo_major_area</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>India</label>
+            <language>en</language>
+            <name>x_snc_ai_learnin_4_ai_sessions</name>
+            <sequence>2</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-03-21 03:37:25</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-03-21 03:37:25</sys_updated_on>
+            <value>india</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>geo_major_area</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Japan</label>
+            <language>en</language>
+            <name>x_snc_ai_learnin_4_ai_sessions</name>
+            <sequence>3</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-03-21 03:37:25</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-03-21 03:37:25</sys_updated_on>
+            <value>japan</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>geo_major_area</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>APAC All</label>
+            <language>en</language>
+            <name>x_snc_ai_learnin_4_ai_sessions</name>
+            <sequence>4</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-03-21 03:37:25</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-03-21 16:15:21</sys_updated_on>
+            <value>apac_general</value>
+        </sys_choice>
+    </sys_choice>
+</record_update>

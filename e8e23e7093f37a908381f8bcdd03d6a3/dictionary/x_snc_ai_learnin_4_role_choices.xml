@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="3c409fbc9373ba908381f8bcdd03d69d" label="AI Learning Day Role Choices" max_length="40" name="x_snc_ai_learnin_4_role_choices" type="collection">
+        <element attributes="edge_encryption_enabled=true" display="true" label="Display Label" mandatory="true" max_length="100" name="label" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Role Name" mandatory="true" max_length="50" name="name" type="string"/>
+    </element>
+</database>
